@@ -41,6 +41,23 @@
         # List contributors with number of commits
         contributors = shortlog --summary --numbered
 
+        alias gr='find .| xargs grep -se'
+
+        ga = add
+        gp = push
+        gl = log
+        gs = status
+        gd = diff
+        gdc = diff --cached
+        gm = commit -m
+        gma = commit -am
+        gb = branch
+        gc = checkout
+        gra = remote add
+        grr = remote rm
+        gpu = pull
+        gcl = clone
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
