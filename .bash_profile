@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/bin:$HOME/local/bin:$HOME/.cabal/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -45,15 +45,6 @@ which grunt &> /dev/null && eval "$(grunt --completion=bash)"
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
-
-#------------------------------------------------------
-# aliases
-#------------------------------------------------------
-
-#alias emacs='emacsclient -a "" -t'
-#alias e='emacs -nw'
-
-alias gr='find .| xargs grep -se'
 
 #------------------------------------------------------
 # history
