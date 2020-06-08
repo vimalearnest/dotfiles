@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$HOME/local/bin:$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/bin:$HOME/local/bin:$HOME/.cabal/bin:$HOME/.local/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -67,6 +67,15 @@ function start_agent {
      /usr/bin/ssh-add;
 }
 
+phx_env () {
+  #VERSION=$1 
+  kerl_deactivate 2>/dev/null
+  source ~/erlang/22.3/activate
+  echo "Erlang path : $(which erl)"
+  kiex use 1.10.2
+  echo "Elixir path : $(which elixir)"
+}
+
 # Source SSH settings, if applicable
 
 if [ -f "${SSH_ENV}" ]; then
@@ -77,3 +86,10 @@ if [ -f "${SSH_ENV}" ]; then
 else
      start_agent;
 fi
+
+#------------------------------------------------------
+# Erlang/Elixir
+#------------------------------------------------------
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+. ~/erlang/curr/activate
+kiex use 1.10.2
