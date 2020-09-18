@@ -67,15 +67,6 @@ function start_agent {
      /usr/bin/ssh-add;
 }
 
-phx_env () {
-  #VERSION=$1 
-  kerl_deactivate 2>/dev/null
-  source ~/erlang/22.3/activate
-  echo "Erlang path : $(which erl)"
-  kiex use 1.10.2
-  echo "Elixir path : $(which elixir)"
-}
-
 # Source SSH settings, if applicable
 
 if [ -f "${SSH_ENV}" ]; then
@@ -88,8 +79,15 @@ else
 fi
 
 #------------------------------------------------------
+# ASDF
+#------------------------------------------------------
+
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+#------------------------------------------------------
 # Erlang/Elixir
 #------------------------------------------------------
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-. ~/erlang/curr/activate
-kiex use 1.10.2
+asdf global erlang 23.0.3
+asdf global elixir 1.10.4
+
