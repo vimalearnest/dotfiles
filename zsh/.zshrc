@@ -1,4 +1,4 @@
-#################################  HISTORY  #################################
+#################################  HISTORY  ###############################
 # history
 HISTFILE=$HOME/.zsh-history # file to save history
 HISTSIZE=100000             # history size in-memory
@@ -6,7 +6,7 @@ SAVEHIST=1000000            # history size in the file
 # share .zshhistory
 setopt inc_append_history   # save the command to history when running
 setopt share_history        # share history with other session
-#################################  COMPLEMENT  #################################
+#################################  COMPLETION  #############################
 # enable completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
@@ -18,3 +18,10 @@ zstyle ':completion:*:default' menu select=2
 setopt auto_cd
 # disable ctrl+s, ctrl+q
 setopt no_flow_control
+#################################  BREW  ###################################
+export HOMEBREW_NO_AUTO_UPDATE=1
+#################################  SOURCE  #################################
+source ~/.path
+source ~/.aliases
+source ~/.exports
+source ~/.functions

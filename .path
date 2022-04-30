@@ -1,0 +1,6 @@
+export PATH="/opt/homebrew/opt/autoconf@2.69/bin:$PATH"
+export PATH="/opt/homebrew/opt/erlang@23/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/erlang@23/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/libyaml/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/libyaml/include"
+export CFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/libyaml/include"
