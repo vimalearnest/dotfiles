@@ -1,0 +1,31 @@
+Install Sophos Antivirus
+ 1 Download the installer in google drive " https://drive.google.com/drive/u/0/folders/1keMwGYd0RDXPtalTEXuDLA2LcT092FG and save it in /tmp
+ 2 Locate the downloaded installer do to the directory /tmp $ cd /tmp
+ 3 Install the package $ sudo ./SophosInstall.sh it will prompt for your password
+ 4 After installation check if on-access scanning is active by running $ sudo /opt/sophos-av/bin/savdstatus you should see " Sophos Antivirus is active but on-access scanning is not running"
+
+Install druva
+ 1  Download the latest Druva package https://downloads.druva.com/insync/#inSync_Clients in /tmp Folder $ curl https://downloads.druva.com/downloads/inSync/Linux/5.9.1/druva-insync-client_5.9.1-100563_amd64.deb -o /tmp/druva-insync-client_5.9.1-100563_amd64.deb
+ 2 Locate the downloaded installer do to the directory /tmp $ cd /tmp
+ 3 Install the package $ sudo dpkg -i druva-insync-client_5.9.1-100563_amd64.deb it will prompt for your password
+ 4 Activate Druva make sure Google chrome is installed in the ubuntu desktop as there are issue activating druva from other browser, from Ubuntu application launcher, locate and double click on druva and activate it similar to mac and windows
+ 5 Perform the backup
+Install Qualys
+ 1 Download the installer in google drive " https://drive.google.com/drive/u/0/folders/1keMwGYd0RDXPtalTEXuDLA2LcT092FGm" and save it in /tmp
+ 2 Locate the downloaded installer do to the/ tmp directory $cd /tmp
+ 3 Install the package $ sudo dpkg -i QualysCloudAgent.deb it will prompt for your password
+ 4 Activate the software $ sudo /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh ActivationId=5a39def5-f326-48d1-a5d7-c993fcddf267 CustomerId=061ffe29-a6e0-e4eb-82a9-5f2940ef33e9 it will prompt for your password
+
+Install druva
+ 1  Download the latest Druva package https://downloads.druva.com/insync/#inSync_Clients in /tmp Folder $ curl https://downloads.druva.com/downloads/inSync/Linux/5.9.1/druva-insync-client_5.9.1-100563_amd64.deb -o /tmp/druva-insync-client_5.9.1-100563_amd64.deb
+ 2 Locate the downloaded installer do to the directory /tmp $ cd /tmp
+ 3 Install the package $ sudo dpkg -i druva-insync-client_5.9.1-100563_amd64.deb it will prompt for your password
+ 4 Activate Druva make sure Google chrome is installed in the ubuntu desktop as there are issue activating druva from other browser, from Ubuntu application launcher, locate and double click on druva and activate it similar to mac and windows
+ 5 Perform the backup
+Install Qualys
+ 1 Download the installer in google drive " https://drive.google.com/drive/u/0/folders/1keMwGYd0RDXPtalTEXuDLA2LcT092FGm" and save it in /tmp
+ 2 Locate the downloaded installer do to the/ tmp directory $cd /tmp
+ 3 Install the package $ sudo dpkg -i QualysCloudAgent.deb it will prompt for your password
+ 4 Activate the software $ sudo /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh ActivationId=5a39def5-f326-48d1-a5d7-c993fcddf267 CustomerId=061ffe29-a6e0-e4eb-82a9-5f2940ef33e9 it will prompt for your password
+
+Hostname : HW0012874-Linux-DDAG3657zoom
