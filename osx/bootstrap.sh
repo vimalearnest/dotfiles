@@ -1,14 +1,15 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-cd "$(dirname "${BASH_SOURCE}")";
-
+pushd .
+cd ..
 git pull origin master;
+popd
 
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-	      --exclude "README.md" --exclude "LICENSE-MIT.txt" \
+	      --exclude "README.md" 
               --exclude "LICENSE-GPL.txt"  -avh --no-perms . ~;
-	source ~/.bash_profile;
+	source ~/.zhrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
