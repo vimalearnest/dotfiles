@@ -1,14 +1,15 @@
 #!/usr/bin/env zsh
 
-pushd .
-cd ..
-git pull origin master;
-popd
+#!/usr/bin/env bash
+
+#pushd .
+#cd ..
+#git pull origin master;
+#popd
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-	      --exclude "README.md" 
-              --exclude "LICENSE-GPL.txt"  -avh --no-perms . ~;
+	rsync --exclude "bootstrap.sh" --exclude "README.md" \
+              -avh --no-perms . ~;
 	source ~/.zhrc;
 }
 
